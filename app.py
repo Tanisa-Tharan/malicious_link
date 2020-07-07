@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    string = request.args.get("bla")
+    string = request.args.get("bla")+""
     URL = 'https://www.urlvoid.com/scan/'+string
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, 'lxml')
